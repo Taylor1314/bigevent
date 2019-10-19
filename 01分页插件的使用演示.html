@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <!-- 放置分页结构的容器 -->
+  <ul id="fenYe"></ul>
+
+
+  <!-- 引入boot的css -->
+  <link rel="stylesheet" href="./web_back/js/bootstrap/css/bootstrap.min.css">
+  <!-- 引入jQuery -->
+  <script src="./web_back/js/jquery-1.12.4.min.js"></script>
+  <!-- 引入twbsPagination插件文件 -->
+  <script src="./web_back/js/jquery.twbsPagination.js"></script>
+
+  <script>
+    /*
+      分页插件：
+        - 作用：当页面中要展示的数据较多时，可以使用分页展示，查看更方便。
+        - 插件文档地址：http://josecebe.github.io/twbs-pagination/
+        - 使用注意点：
+          - twbsPagination插件是jQuery插件，必须先引入jQuery
+          - 样式采用bootstrap样式，必须再引入boot的css文件
+        - 使用步骤：
+          - 给指定元素调用twbsPagination()
+          - 传入分页功能的配置信息，对象，配置的具体名称见文档
+    */
+
+    $('#fenYe').twbsPagination({
+      // 总页数 totalPages，应当从服务端的响应内容中获取
+      totalPages: 28,
+      visiblePages: 7, // 当前一共显示几个页码
+      first: '首页',
+      last: '尾页',
+      prev: '上一页',
+      next: '下一页'
+    });
+
+
+
+  </script>
+</body>
+
+</html>

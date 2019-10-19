@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" id="text" readonly>
+  <button id="btn">点击展示日期</button>
+
+  <!-- 引入jeDate的css文件 -->
+  <link rel="stylesheet" href="./web_back/js/jedate/css/jedate.css">
+  <!-- 引入jeDate的js文件 -->
+  <script src="./web_back/js/jedate/js/jedate.js"></script>
+  <script>
+
+    // jeDate网站地址：http://www.jemui.com/uidoc/jedate.html#core
+    // 自己指定元素设置事件
+    document.getElementById('btn').onclick = function () {
+      jeDate('#text', {
+        // 不使用工具自带的事件
+        trigger: false,
+        // isinitVal: true,
+        // festival: true,
+        format: 'YYYY-MM-DD hh:mm:ss'
+      });
+    }
+
+
+
+
+
+  </script>
+</body>
+
+</html>
